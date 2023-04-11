@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <form>
+      <p class="main">Password Generator</p>
+      <div class="text-img">
+        <h1 class="text" id="password-generator"     data-placeholder="P4$5W0rD!"></h1>
+        <div onclick="copyText()">
+          <p id="copy-info" class="copy">COPIED</p>
+          <img
+            class="icon-copy"
+            src="./starter-code/assets/images/icon-copy.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </form>
+    <section>
+      <div class="length">
+        <p class="character">Character Length</p>
+        <p id="num" class="num">10</p>
+      </div>
+      <form>
+        <div id="line" class="line"></div>
+        <input
+          type="range"
+          id="range"
+          class="range"
+          name="range"
+          min="1"
+          max="20"
+        />
+      </form>
+      <form class="upper">
+        <input id="letter1" type="checkbox" name="letters1" value="letters" />
+        <label class="letters" for="vehicle1"> Include Uppercase Letters</label
+        ><br />
+
+        <input id="letter2" type="checkbox" name="letters2" value="letters" />
+        <label class="letters" for="vehicle2"> Include Lowercase Letters</label
+        ><br />
+
+        <input id="letter3" type="checkbox" name="numbers" value="numbers" />
+        <label class="letters" for="vehicle3"> Include Numbers</label><br />
+
+        <input id="letter4" type="checkbox" name="symbols" value="symbols" />
+        <label class="letters" for="vehicle3"> Include Symbols</label
+        ><br /><br />
+      </form>
+
+      <div class="strength">
+        <p class="str">Strength</p>
+        <div id="recta-no-color" class="recta">
+          <div class="rectangel"></div>
+          <div class="rectangel"></div>
+          <div class="rectangel"></div>
+          <div class="rectangel"></div>
+        </div>
+
+        <div id="recta-too-weak" class="recta1">
+          <p class="too-weak">TOO WEAK!</p>
+          <div class="rectangel1"></div>
+          <div class="rectangel01"></div>
+          <div class="rectangel01"></div>
+          <div class="rectangel01"></div>
+        </div>
+
+        <div id="recta-weak" class="recta2">
+          <p class="weak">WEAK</p>
+          <div class="rectangel2"></div>
+          <div class="rectangel2"></div>
+          <div class="rectangel02"></div>
+          <div class="rectangel02"></div>
+        </div>
+
+        <div id="recta-medium" class="recta3">
+          <p class="med">MEDIUM</p>
+          <div class="rectangel3"></div>
+          <div class="rectangel3"></div>
+          <div class="rectangel3"></div>
+          <div class="rectangel03"></div>
+        </div>
+
+        <div id="recta-strong" class="recta4">
+          <p class="to-strong">STRONG</p>
+          <div class="rectangel4"></div>
+          <div class="rectangel4"></div>
+          <div class="rectangel4"></div>
+          <div class="rectangel4"></div>
+        </div>
+      </div>
+      <button id="btn-btn" class="btn" onclick="generatorRandom()" onmouseover="hover()" onmouseleave="blackHover()">
+        Generate
+        <img
+          class="arrow"
+          src="./starter-code/assets/images/icon-arrow-right.svg"
+          alt="arrow right"
+        />
+        
+        </svg>
+      </button>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
